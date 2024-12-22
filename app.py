@@ -59,6 +59,7 @@ def index():
                                 with open(os.path.join(save_directory, f"{query}_{image_tags.index(image_tag)}.jpg"), "wb") as f:
                                     f.write(image_data)
                     client = pymongo.MongoClient("mongodb+srv://siddhidash:svdash@cluster0.y63mr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+                    #Whayever you search,that will be saved into my database, so provide your link with the password.
                     db = client['image_scrap']
                     review_col = db['image_scrap_data']
                     review_col.insert_many(img_data)          
